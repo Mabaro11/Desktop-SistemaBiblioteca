@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kaSf2sSbn3ZZq1vQg6mZJfs0rgTvt4dCiDSzHlqt3iZ5hznji5ZaT5EfNBNSy9Ihp4bKQ7VKxQKCWJpzFRaydQ==",
+  "success": true,
+  "projectFilePath": "D:\\Programacion\\GitHub\\SistemaBiblioteca\\DesktopBiblioteca\\DesktopBiblioteca.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mauri\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
