@@ -13,6 +13,37 @@
             "fileVersion": "13.0.2.27524"
           }
         }
+      },
+      "Syncfusion.Core.WinForms/20.4.0.50": {
+        "dependencies": {
+          "Syncfusion.Licensing": "20.4.0.50",
+          "Syncfusion.Shared.Base": "20.4.0.50"
+        },
+        "runtime": {
+          "lib/net46/Syncfusion.Core.WinForms.dll": {
+            "assemblyVersion": "20.4460.0.50",
+            "fileVersion": "20.4460.0.50"
+          }
+        }
+      },
+      "Syncfusion.Licensing/20.4.0.50": {
+        "runtime": {
+          "lib/netcoreapp3.1/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "20.4.0.50",
+            "fileVersion": "20.4.0.50"
+          }
+        }
+      },
+      "Syncfusion.Shared.Base/20.4.0.50": {
+        "dependencies": {
+          "Syncfusion.Licensing": "20.4.0.50"
+        },
+        "runtime": {
+          "lib/net46/Syncfusion.Shared.Base.dll": {
+            "assemblyVersion": "20.4460.0.50",
+            "fileVersion": "20.4460.0.50"
+          }
+        }
       }
     }
   },
@@ -23,6 +54,27 @@
       "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
       "path": "newtonsoft.json/13.0.2",
       "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
+    },
+    "Syncfusion.Core.WinForms/20.4.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VdQDHSaNcyB750MreguUxi9giezLy41RBq26fQ1qLe0mOg8Jqz+tSdPewsvS4QQBdCZ/f+TGraXwSW9reSs2DA==",
+      "path": "syncfusion.core.winforms/20.4.0.50",
+      "hashPath": "syncfusion.core.winforms.20.4.0.50.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/20.4.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aRLN72Z7/W2Sba7RdCyEzpTjdZvUmcVQpsFe0ACS04oDglNvAeqJ0k0zFM3pb8GRKZ3wf1MmfR2UJbc0KyYVaA==",
+      "path": "syncfusion.licensing/20.4.0.50",
+      "hashPath": "syncfusion.licensing.20.4.0.50.nupkg.sha512"
+    },
+    "Syncfusion.Shared.Base/20.4.0.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mjsPkCQiviZuQBEr07PsJOojgHE3N+Bj5okpFdgH063/EkSKu1+5uMvwpLaeGpAvG0mjqFsqG6ZhtgT+DvskZA==",
+      "path": "syncfusion.shared.base/20.4.0.50",
+      "hashPath": "syncfusion.shared.base.20.4.0.50.nupkg.sha512"
     }
   }
 }

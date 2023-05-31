@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programacion\\GitHub\\SistemaBiblioteca\\DesktopBiblioteca\\DesktopBiblioteca.csproj": {}
+    "D:\\Programacion\\GitHub\\SistemaBiblioteca-Desktop\\DesktopBiblioteca\\DesktopBiblioteca.csproj": {}
   },
   "projects": {
-    "D:\\Programacion\\GitHub\\SistemaBiblioteca\\DesktopBiblioteca\\DesktopBiblioteca.csproj": {
+    "D:\\Programacion\\GitHub\\SistemaBiblioteca-Desktop\\DesktopBiblioteca\\DesktopBiblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programacion\\GitHub\\SistemaBiblioteca\\DesktopBiblioteca\\DesktopBiblioteca.csproj",
+        "projectUniqueName": "D:\\Programacion\\GitHub\\SistemaBiblioteca-Desktop\\DesktopBiblioteca\\DesktopBiblioteca.csproj",
         "projectName": "DesktopBiblioteca",
-        "projectPath": "D:\\Programacion\\GitHub\\SistemaBiblioteca\\DesktopBiblioteca\\DesktopBiblioteca.csproj",
+        "projectPath": "D:\\Programacion\\GitHub\\SistemaBiblioteca-Desktop\\DesktopBiblioteca\\DesktopBiblioteca.csproj",
         "packagesPath": "C:\\Users\\Mauri\\.nuget\\packages\\",
-        "outputPath": "D:\\Programacion\\GitHub\\SistemaBiblioteca\\DesktopBiblioteca\\obj\\",
+        "outputPath": "D:\\Programacion\\GitHub\\SistemaBiblioteca-Desktop\\DesktopBiblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
+            },
+            "Syncfusion.Core.WinForms": {
+              "target": "Package",
+              "version": "[20.4.0.50, )"
             }
           },
           "imports": [

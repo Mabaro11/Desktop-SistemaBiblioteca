@@ -52,21 +52,23 @@ namespace DesktopBiblioteca.ApiHelper
                             if (data != null)
                                 oReply.Data = JsonConvert.DeserializeObject<T>(data);
 
+                            //oReply.StatusCode = res.StatusCode.ToString();
                             oReply.StatusCode = res.StatusCode.ToString();
+
                         }
                     }
                 }
             }
             catch (WebException ex)
             {
-                oReply.StatusCode = "ServerError";
+                oReply.StatusCode = $"ServerError: {ex}";
                 var response = (HttpWebResponse)ex.Response;
                 if (response != null)
                     oReply.StatusCode = response.StatusCode.ToString();
             }
             catch (Exception ex)
             {
-                oReply.StatusCode = "AppError";
+                oReply.StatusCode = $"AppError: {ex}";
             }
             return oReply;
         }
