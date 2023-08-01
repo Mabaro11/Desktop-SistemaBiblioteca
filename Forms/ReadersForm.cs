@@ -68,7 +68,7 @@ namespace DesktopBiblioteca.Forms
 
         private void dataGridReaders_SelectionChanged(object sender, EventArgs e)
         {
-            if(readersList.Count > 0)
+            if (readersList.Count > 0)
             {
                 //Con este metodo del datagridview logro que se carguen en los los siguientes txt los valores seleccionados.
                 txtNombre.Text = Convert.ToString(dataGridReaders.CurrentRow.Cells[1].Value);
@@ -240,6 +240,10 @@ namespace DesktopBiblioteca.Forms
             readersList.Filter = string.Format("name LIKE '%{0}%'", txtBuscar.Text);
             dataGridReaders.AllowUserToAddRows = false;
         }
-    
+
+        private void btnGetReaders_Click(object sender, EventArgs e)
+        {
+            GetReaders();
+        }
     }
 }

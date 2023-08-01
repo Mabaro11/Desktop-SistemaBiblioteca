@@ -173,6 +173,16 @@ namespace DesktopBiblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap printer_paper_icon_145946 {
+            get {
+                object obj = ResourceManager.GetObject("printer_paper_icon_145946", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reload_ui_2_svgrepo_com {
             get {
                 object obj = ResourceManager.GetObject("reload-ui-2-svgrepo-com", resourceCulture);

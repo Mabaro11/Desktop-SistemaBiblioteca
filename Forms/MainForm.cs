@@ -28,7 +28,7 @@ namespace DesktopBiblioteca
             this.panelContenedor.Controls.Add(chForm);
             this.panelContenedor.Tag = chForm;
             chForm.Show();
-            
+
         }
 
         private void btnReaders_Click(object sender, EventArgs e)

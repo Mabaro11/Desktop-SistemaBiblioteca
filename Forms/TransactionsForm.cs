@@ -1,6 +1,7 @@
 ﻿using DesktopBiblioteca.ApiHelper;
 using DesktopBiblioteca.Entities;
 using DesktopBiblioteca.Interfaces;
+using DesktopBiblioteca.Reportes;
 using Syncfusion.WinForms.Core.Utils;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,11 @@ namespace DesktopBiblioteca.Forms
 {
     public partial class TransactionsForm : Form, ITransaction
     {
-        private readonly String URI = "http://localhost:5000/api";
+        private readonly string URI = Program.BaseUrl;
 
-        private String URLTransactions;
-        private String URLBooks;
-        private String URLReaders;
+        private string URLTransactions;
+        private string URLBooks;
+        private string URLReaders;
 
         //BindingSource transactionsList = new BindingSource();
         //BindingSource booksList = new BindingSource();
@@ -44,9 +45,9 @@ namespace DesktopBiblioteca.Forms
         {
             busyIndicator.Show(this.dataGridTransactions);
             DisableControls();
-            
+
             Reply oReply = new Reply();
-            
+
             oReply = await Consumer.Execute<List<Transaction>>(URLTransactions, ApiHelper.methodHttp.GET, listadoTransaction);
             this.listadoTransaction = (List<Transaction>)oReply.Data;
             CheckReply(oReply);
@@ -78,6 +79,7 @@ namespace DesktopBiblioteca.Forms
         {
             listadoTransaction.Add(transaction);
             setBindingList();
+            ImprimirReporte(transaction.ID);
         }
 
         private void setBindingList()
@@ -105,16 +107,19 @@ namespace DesktopBiblioteca.Forms
             btnPrestamo.Enabled = true;
             btnEliminar.Enabled = true;
             btnDevolucion.Enabled = true;
+            btnPrint.Enabled = true;
+
         }
         private void DisableControls()
         {
             btnPrestamo.Enabled = false;
             btnDevolucion.Enabled = false;
             btnEliminar.Enabled = false;
+            btnPrint.Enabled = false;
         }
 
 
-        private void CheckReply(Reply oReply )
+        private void CheckReply(Reply oReply)
         {
             if (oReply.StatusCode != "OK")
             {
@@ -190,11 +195,11 @@ namespace DesktopBiblioteca.Forms
             if (frm != null)
             {
                 //si la instancia existe la pongo en primer plano
-                
+
                 NewTransactionForm chForm = frm as NewTransactionForm;
                 chForm.Show(this);
                 return;
-                
+
             }
             else
             {
@@ -203,7 +208,7 @@ namespace DesktopBiblioteca.Forms
                 newFrm.Owner = this;
                 newFrm.Show();
             }
-            
+
 
         }
 
@@ -228,11 +233,11 @@ namespace DesktopBiblioteca.Forms
                             Reply oReply = new Reply();
 
                             //creamos un objeto del tipo transaction
-                            Transaction transaction = listadoTransaction.Find(t=> t.ID == Convert.ToInt32(GetValorCelda(dataGridTransactions, 0))) ;
+                            Transaction transaction = listadoTransaction.Find(t => t.ID == Convert.ToInt32(GetValorCelda(dataGridTransactions, 0)));
 
-                            if(transaction.ReaderID != 0)
+                            if (transaction.ReaderID != 0)
                             {
-                                transaction.status = (int)StatusEnum.Devuelto ;
+                                transaction.status = (int)StatusEnum.Devuelto;
                                 transaction.ReturnDate = DateTime.Now;
 
                                 oReply = await Consumer.Execute(URLTransactions + "/" + transaction.ID, methodHttp.PUT, transaction);
@@ -289,10 +294,43 @@ namespace DesktopBiblioteca.Forms
 
                 MessageBox.Show(oReply.Data.ToString());
                 filteredList.RemoveCurrent();
-                
+
             }
 
 
+        }
+
+        private async void ImprimirReporte(int transactionId)
+        {
+            DialogResult respuestaComprobante = MessageBox.Show($"¿Desea imprimir un comprobante del prestamo?", "Confirmar ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuestaComprobante == DialogResult.Yes)
+            {
+
+                Transaction transaction = new Transaction();
+                Reply oReply = new Reply();
+
+                oReply = await Consumer.Execute(URLTransactions + $"/{transactionId}", methodHttp.GET, transaction);
+
+                transaction = (Transaction)oReply.Data;
+
+                Reader reader = listadoReader.Where(r => r.id.Equals(transaction.ReaderID)).First();
+                Book book = listadoBook.Where(r => r.ID.Equals(transaction.BookID)).First();
+
+                ReportViewerForm report = new ReportViewerForm(transaction, reader, book);
+                report.Show();
+
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            var transactionId = Convert.ToInt32(dataGridTransactions.CurrentRow.Cells[0].Value);
+            ImprimirReporte(transactionId);
         }
     }
 }

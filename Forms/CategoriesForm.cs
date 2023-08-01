@@ -15,8 +15,8 @@ namespace DesktopBiblioteca.Forms
     public partial class CategoriesForm : Form
     {
 
-        private readonly String URI = "http://localhost:5000/api";
-        private String URLCategories;
+        private readonly string URI = Program.BaseUrl;
+        private string URLCategories;
 
         BindingSource categoriesList = new BindingSource();
 

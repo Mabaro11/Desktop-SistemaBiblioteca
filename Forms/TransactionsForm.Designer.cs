@@ -28,193 +28,204 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LbTituloTransacciones = new System.Windows.Forms.Label();
-            this.dataGridTransactions = new System.Windows.Forms.DataGridView();
-            this.btnGet = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnPrestamo = new System.Windows.Forms.Button();
-            this.radButtLector = new System.Windows.Forms.RadioButton();
-            this.radButtLibro = new System.Windows.Forms.RadioButton();
-            this.btnDevolucion = new System.Windows.Forms.Button();
-            this.chkboxTransCompletas = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridTransactions)).BeginInit();
-            this.SuspendLayout();
+            LbTituloTransacciones = new System.Windows.Forms.Label();
+            dataGridTransactions = new System.Windows.Forms.DataGridView();
+            btnGet = new System.Windows.Forms.Button();
+            txtBuscar = new System.Windows.Forms.TextBox();
+            btnEliminar = new System.Windows.Forms.Button();
+            btnPrestamo = new System.Windows.Forms.Button();
+            radButtLector = new System.Windows.Forms.RadioButton();
+            radButtLibro = new System.Windows.Forms.RadioButton();
+            btnDevolucion = new System.Windows.Forms.Button();
+            chkboxTransCompletas = new System.Windows.Forms.CheckBox();
+            btnPrint = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridTransactions).BeginInit();
+            SuspendLayout();
             // 
             // LbTituloTransacciones
             // 
-            this.LbTituloTransacciones.AutoSize = true;
-            this.LbTituloTransacciones.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LbTituloTransacciones.Location = new System.Drawing.Point(12, 9);
-            this.LbTituloTransacciones.Name = "LbTituloTransacciones";
-            this.LbTituloTransacciones.Size = new System.Drawing.Size(163, 42);
-            this.LbTituloTransacciones.TabIndex = 37;
-            this.LbTituloTransacciones.Text = "Prestamos";
+            LbTituloTransacciones.AutoSize = true;
+            LbTituloTransacciones.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            LbTituloTransacciones.Location = new System.Drawing.Point(12, 9);
+            LbTituloTransacciones.Name = "LbTituloTransacciones";
+            LbTituloTransacciones.Size = new System.Drawing.Size(163, 42);
+            LbTituloTransacciones.TabIndex = 37;
+            LbTituloTransacciones.Text = "Prestamos";
             // 
             // dataGridTransactions
             // 
-            this.dataGridTransactions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridTransactions.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTransactions.Location = new System.Drawing.Point(12, 84);
-            this.dataGridTransactions.MultiSelect = false;
-            this.dataGridTransactions.Name = "dataGridTransactions";
-            this.dataGridTransactions.ReadOnly = true;
-            this.dataGridTransactions.RowHeadersVisible = false;
-            this.dataGridTransactions.RowTemplate.Height = 25;
-            this.dataGridTransactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridTransactions.Size = new System.Drawing.Size(657, 354);
-            this.dataGridTransactions.TabIndex = 4;
+            dataGridTransactions.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            dataGridTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridTransactions.BackgroundColor = System.Drawing.Color.SeaShell;
+            dataGridTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridTransactions.Location = new System.Drawing.Point(12, 84);
+            dataGridTransactions.MultiSelect = false;
+            dataGridTransactions.Name = "dataGridTransactions";
+            dataGridTransactions.ReadOnly = true;
+            dataGridTransactions.RowHeadersVisible = false;
+            dataGridTransactions.RowTemplate.Height = 25;
+            dataGridTransactions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dataGridTransactions.Size = new System.Drawing.Size(657, 354);
+            dataGridTransactions.TabIndex = 4;
             // 
             // btnGet
             // 
-            this.btnGet.BackColor = System.Drawing.Color.SeaShell;
-            this.btnGet.BackgroundImage = global::DesktopBiblioteca.Properties.Resources.reload_ui_2_svgrepo_com;
-            this.btnGet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnGet.FlatAppearance.BorderSize = 3;
-            this.btnGet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnGet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGet.Location = new System.Drawing.Point(640, 55);
-            this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(29, 23);
-            this.btnGet.TabIndex = 43;
-            this.btnGet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGet.UseVisualStyleBackColor = false;
-            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
+            btnGet.BackColor = System.Drawing.Color.SeaShell;
+            btnGet.BackgroundImage = Properties.Resources.reload_ui_2_svgrepo_com;
+            btnGet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnGet.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnGet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnGet.FlatAppearance.BorderSize = 3;
+            btnGet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnGet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnGet.Location = new System.Drawing.Point(640, 55);
+            btnGet.Name = "btnGet";
+            btnGet.Size = new System.Drawing.Size(29, 23);
+            btnGet.TabIndex = 43;
+            btnGet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnGet.UseVisualStyleBackColor = false;
+            btnGet.Click += btnGet_Click;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(12, 54);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PlaceholderText = "Buscar...";
-            this.txtBuscar.Size = new System.Drawing.Size(345, 23);
-            this.txtBuscar.TabIndex = 0;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            txtBuscar.Location = new System.Drawing.Point(12, 54);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar...";
+            txtBuscar.Size = new System.Drawing.Size(345, 23);
+            txtBuscar.TabIndex = 0;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.BackColor = System.Drawing.Color.SeaShell;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Image = global::DesktopBiblioteca.Properties.Resources.eliminar;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(675, 174);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(122, 39);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar ";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            btnEliminar.BackColor = System.Drawing.Color.SeaShell;
+            btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnEliminar.Image = Properties.Resources.eliminar;
+            btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnEliminar.Location = new System.Drawing.Point(675, 174);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new System.Drawing.Size(122, 39);
+            btnEliminar.TabIndex = 3;
+            btnEliminar.Text = "Eliminar ";
+            btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnPrestamo
             // 
-            this.btnPrestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnPrestamo.BackColor = System.Drawing.Color.SeaShell;
-            this.btnPrestamo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrestamo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnPrestamo.FlatAppearance.BorderSize = 3;
-            this.btnPrestamo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPrestamo.Image = global::DesktopBiblioteca.Properties.Resources.plus;
-            this.btnPrestamo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrestamo.Location = new System.Drawing.Point(675, 84);
-            this.btnPrestamo.Name = "btnPrestamo";
-            this.btnPrestamo.Size = new System.Drawing.Size(122, 39);
-            this.btnPrestamo.TabIndex = 1;
-            this.btnPrestamo.Text = "Prestamo";
-            this.btnPrestamo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrestamo.UseVisualStyleBackColor = false;
-            this.btnPrestamo.Click += new System.EventHandler(this.btnPrestamo_Click);
+            btnPrestamo.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            btnPrestamo.BackColor = System.Drawing.Color.SeaShell;
+            btnPrestamo.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnPrestamo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnPrestamo.FlatAppearance.BorderSize = 3;
+            btnPrestamo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnPrestamo.Image = Properties.Resources.plus;
+            btnPrestamo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnPrestamo.Location = new System.Drawing.Point(675, 84);
+            btnPrestamo.Name = "btnPrestamo";
+            btnPrestamo.Size = new System.Drawing.Size(122, 39);
+            btnPrestamo.TabIndex = 1;
+            btnPrestamo.Text = "Prestamo";
+            btnPrestamo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnPrestamo.UseVisualStyleBackColor = false;
+            btnPrestamo.Click += btnPrestamo_Click;
             // 
             // radButtLector
             // 
-            this.radButtLector.AutoSize = true;
-            this.radButtLector.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radButtLector.Location = new System.Drawing.Point(366, 56);
-            this.radButtLector.Name = "radButtLector";
-            this.radButtLector.Size = new System.Drawing.Size(64, 20);
-            this.radButtLector.TabIndex = 46;
-            this.radButtLector.TabStop = true;
-            this.radButtLector.Text = "Lector";
-            this.radButtLector.UseVisualStyleBackColor = true;
-            this.radButtLector.CheckedChanged += new System.EventHandler(this.radButtLector_CheckedChanged);
+            radButtLector.AutoSize = true;
+            radButtLector.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            radButtLector.Location = new System.Drawing.Point(366, 56);
+            radButtLector.Name = "radButtLector";
+            radButtLector.Size = new System.Drawing.Size(64, 20);
+            radButtLector.TabIndex = 46;
+            radButtLector.TabStop = true;
+            radButtLector.Text = "Lector";
+            radButtLector.UseVisualStyleBackColor = true;
+            radButtLector.CheckedChanged += radButtLector_CheckedChanged;
             // 
             // radButtLibro
             // 
-            this.radButtLibro.AutoSize = true;
-            this.radButtLibro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radButtLibro.Location = new System.Drawing.Point(436, 56);
-            this.radButtLibro.Name = "radButtLibro";
-            this.radButtLibro.Size = new System.Drawing.Size(57, 20);
-            this.radButtLibro.TabIndex = 47;
-            this.radButtLibro.TabStop = true;
-            this.radButtLibro.Text = "Libro";
-            this.radButtLibro.UseVisualStyleBackColor = true;
-            this.radButtLibro.CheckedChanged += new System.EventHandler(this.radButtLibro_CheckedChanged);
+            radButtLibro.AutoSize = true;
+            radButtLibro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            radButtLibro.Location = new System.Drawing.Point(436, 56);
+            radButtLibro.Name = "radButtLibro";
+            radButtLibro.Size = new System.Drawing.Size(57, 20);
+            radButtLibro.TabIndex = 47;
+            radButtLibro.TabStop = true;
+            radButtLibro.Text = "Libro";
+            radButtLibro.UseVisualStyleBackColor = true;
+            radButtLibro.CheckedChanged += radButtLibro_CheckedChanged;
             // 
             // btnDevolucion
             // 
-            this.btnDevolucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDevolucion.BackColor = System.Drawing.Color.SeaShell;
-            this.btnDevolucion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDevolucion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDevolucion.FlatAppearance.BorderSize = 3;
-            this.btnDevolucion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDevolucion.Image = global::DesktopBiblioteca.Properties.Resources.izquierda;
-            this.btnDevolucion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDevolucion.Location = new System.Drawing.Point(675, 129);
-            this.btnDevolucion.Name = "btnDevolucion";
-            this.btnDevolucion.Size = new System.Drawing.Size(122, 39);
-            this.btnDevolucion.TabIndex = 2;
-            this.btnDevolucion.Text = " Devolucion";
-            this.btnDevolucion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDevolucion.UseVisualStyleBackColor = false;
-            this.btnDevolucion.Click += new System.EventHandler(this.btnDevolucion_Click);
+            btnDevolucion.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            btnDevolucion.BackColor = System.Drawing.Color.SeaShell;
+            btnDevolucion.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnDevolucion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnDevolucion.FlatAppearance.BorderSize = 3;
+            btnDevolucion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnDevolucion.Image = Properties.Resources.izquierda;
+            btnDevolucion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnDevolucion.Location = new System.Drawing.Point(675, 129);
+            btnDevolucion.Name = "btnDevolucion";
+            btnDevolucion.Size = new System.Drawing.Size(122, 39);
+            btnDevolucion.TabIndex = 2;
+            btnDevolucion.Text = " Devolucion";
+            btnDevolucion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnDevolucion.UseVisualStyleBackColor = false;
+            btnDevolucion.Click += btnDevolucion_Click;
             // 
             // chkboxTransCompletas
             // 
-            this.chkboxTransCompletas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkboxTransCompletas.AutoSize = true;
-            this.chkboxTransCompletas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.chkboxTransCompletas.Location = new System.Drawing.Point(675, 402);
-            this.chkboxTransCompletas.Name = "chkboxTransCompletas";
-            this.chkboxTransCompletas.Size = new System.Drawing.Size(95, 36);
-            this.chkboxTransCompletas.TabIndex = 50;
-            this.chkboxTransCompletas.Text = "Ocultar \r\nCompletos\r\n";
-            this.chkboxTransCompletas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkboxTransCompletas.UseVisualStyleBackColor = true;
-            this.chkboxTransCompletas.CheckedChanged += new System.EventHandler(this.chkboxTransCompletas_CheckedChanged);
+            chkboxTransCompletas.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            chkboxTransCompletas.AutoSize = true;
+            chkboxTransCompletas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            chkboxTransCompletas.Location = new System.Drawing.Point(675, 402);
+            chkboxTransCompletas.Name = "chkboxTransCompletas";
+            chkboxTransCompletas.Size = new System.Drawing.Size(95, 36);
+            chkboxTransCompletas.TabIndex = 50;
+            chkboxTransCompletas.Text = "Ocultar \r\nCompletos\r\n";
+            chkboxTransCompletas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            chkboxTransCompletas.UseVisualStyleBackColor = true;
+            chkboxTransCompletas.CheckedChanged += chkboxTransCompletas_CheckedChanged;
+            // 
+            // btnPrint
+            // 
+            btnPrint.BackgroundImage = Properties.Resources.printer_paper_icon_145946;
+            btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnPrint.Location = new System.Drawing.Point(605, 55);
+            btnPrint.Name = "btnPrint";
+            btnPrint.Size = new System.Drawing.Size(29, 23);
+            btnPrint.TabIndex = 51;
+            btnPrint.UseVisualStyleBackColor = true;
+            btnPrint.Click += btnPrint_Click;
             // 
             // TransactionsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(164)))), ((int)(((byte)(146)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.chkboxTransCompletas);
-            this.Controls.Add(this.btnDevolucion);
-            this.Controls.Add(this.radButtLibro);
-            this.Controls.Add(this.radButtLector);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnPrestamo);
-            this.Controls.Add(this.btnGet);
-            this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.dataGridTransactions);
-            this.Controls.Add(this.LbTituloTransacciones);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TransactionsForm";
-            this.Text = "TransactionsForm";
-            this.Load += new System.EventHandler(this.TransactionsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridTransactions)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(195, 164, 146);
+            ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(btnPrint);
+            Controls.Add(chkboxTransCompletas);
+            Controls.Add(btnDevolucion);
+            Controls.Add(radButtLibro);
+            Controls.Add(radButtLector);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnPrestamo);
+            Controls.Add(btnGet);
+            Controls.Add(txtBuscar);
+            Controls.Add(dataGridTransactions);
+            Controls.Add(LbTituloTransacciones);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Name = "TransactionsForm";
+            Text = "TransactionsForm";
+            Load += TransactionsForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridTransactions).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -229,5 +240,6 @@
         private System.Windows.Forms.RadioButton radButtLibro;
         private System.Windows.Forms.Button btnDevolucion;
         private System.Windows.Forms.CheckBox chkboxTransCompletas;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

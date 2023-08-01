@@ -4,11 +4,7 @@ using DesktopBiblioteca.Interfaces;
 using Syncfusion.WinForms.Core.Utils;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DesktopBiblioteca.Forms
@@ -16,7 +12,7 @@ namespace DesktopBiblioteca.Forms
     public partial class NewTransactionForm : Form
     {
 
-        private String URI = "http://localhost:5000/api" + "/transaction";
+        private string URI = Program.BaseUrl + "/transaction";
 
         BusyIndicator busyIndicatorReaders= new BusyIndicator();
         BusyIndicator busyIndicatorBooks = new BusyIndicator();
@@ -104,7 +100,7 @@ namespace DesktopBiblioteca.Forms
                 dataGridLibros.Columns["description"].Visible = false; // Telefono
                 dataGridLibros.Columns["editorial"].Visible = false; // Direccion
                 dataGridLibros.Columns["category"].Visible = false; // Email 
-                dataGridLibros.Columns["availability"].Visible = false; // Categoria 
+                //dataGridLibros.Columns["availability"].Visible = false; // Categoria 
                 dataGridLibros.Columns["categoryID"].Visible = false; // Categoria 
                 dataGridLibros.Columns["title"].HeaderText = "Titulo";
                 dataGridLibros.Columns["author"].HeaderText = "Autor";
@@ -159,9 +155,11 @@ namespace DesktopBiblioteca.Forms
 
                         oReply = await Consumer.Execute<Transaction>(URI, ApiHelper.methodHttp.POST, transaction);
                         MessageBox.Show(oReply.StatusCode);
+                        transaction = (Transaction)oReply.Data;
 
-                        
+
                         if (this.Owner is ITransaction formInterface)
+                            
                             formInterface.setNewTransaction(transaction);
 
                         this.Close();

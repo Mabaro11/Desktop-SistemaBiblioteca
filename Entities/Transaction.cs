@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopBiblioteca.ApiHelper;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,5 +15,10 @@ namespace DesktopBiblioteca.Entities
         public int ReaderID { get; set; }
         public virtual Reader Reader { get; set; }
         public int status { get; set; }
+
+        public static implicit operator Transaction(Reply v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

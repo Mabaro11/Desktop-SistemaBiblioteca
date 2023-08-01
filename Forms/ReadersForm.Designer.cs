@@ -28,371 +28,345 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.dataGridReaders = new System.Windows.Forms.DataGridView();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.lblDireccion = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.txtDNI = new System.Windows.Forms.TextBox();
-            this.lblDNI = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.LbTituloClientes = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnGet = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridReaders)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            txtBuscar = new System.Windows.Forms.TextBox();
+            dataGridReaders = new System.Windows.Forms.DataGridView();
+            txtDireccion = new System.Windows.Forms.TextBox();
+            lblDireccion = new System.Windows.Forms.Label();
+            txtTelefono = new System.Windows.Forms.TextBox();
+            lblTelefono = new System.Windows.Forms.Label();
+            txtDNI = new System.Windows.Forms.TextBox();
+            lblDNI = new System.Windows.Forms.Label();
+            txtNombre = new System.Windows.Forms.TextBox();
+            lblNombre = new System.Windows.Forms.Label();
+            btnModificar = new System.Windows.Forms.Button();
+            btnEliminar = new System.Windows.Forms.Button();
+            txtEmail = new System.Windows.Forms.TextBox();
+            lblEmail = new System.Windows.Forms.Label();
+            LbTituloClientes = new System.Windows.Forms.Label();
+            panel1 = new System.Windows.Forms.Panel();
+            label1 = new System.Windows.Forms.Label();
+            btnSave = new System.Windows.Forms.Button();
+            btnCancel = new System.Windows.Forms.Button();
+            btnNuevo = new System.Windows.Forms.Button();
+            btnGetReaders = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridReaders).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(12, 12);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PlaceholderText = "Buscar...";
-            this.txtBuscar.Size = new System.Drawing.Size(356, 23);
-            this.txtBuscar.TabIndex = 0;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            txtBuscar.Location = new System.Drawing.Point(12, 12);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar...";
+            txtBuscar.Size = new System.Drawing.Size(356, 23);
+            txtBuscar.TabIndex = 0;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // dataGridReaders
             // 
-            this.dataGridReaders.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridReaders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridReaders.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridReaders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridReaders.Location = new System.Drawing.Point(12, 41);
-            this.dataGridReaders.MultiSelect = false;
-            this.dataGridReaders.Name = "dataGridReaders";
-            this.dataGridReaders.ReadOnly = true;
-            this.dataGridReaders.RowHeadersVisible = false;
-            this.dataGridReaders.RowTemplate.Height = 25;
-            this.dataGridReaders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridReaders.Size = new System.Drawing.Size(391, 416);
-            this.dataGridReaders.TabIndex = 1;
-            this.dataGridReaders.TabStop = false;
-            this.dataGridReaders.SelectionChanged += new System.EventHandler(this.dataGridReaders_SelectionChanged);
+            dataGridReaders.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            dataGridReaders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridReaders.BackgroundColor = System.Drawing.Color.SeaShell;
+            dataGridReaders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridReaders.Location = new System.Drawing.Point(12, 41);
+            dataGridReaders.MultiSelect = false;
+            dataGridReaders.Name = "dataGridReaders";
+            dataGridReaders.ReadOnly = true;
+            dataGridReaders.RowHeadersVisible = false;
+            dataGridReaders.RowTemplate.Height = 25;
+            dataGridReaders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dataGridReaders.Size = new System.Drawing.Size(391, 416);
+            dataGridReaders.TabIndex = 1;
+            dataGridReaders.TabStop = false;
+            dataGridReaders.SelectionChanged += dataGridReaders_SelectionChanged;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDireccion.BackColor = System.Drawing.Color.SeaShell;
-            this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDireccion.Location = new System.Drawing.Point(117, 118);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.ReadOnly = true;
-            this.txtDireccion.Size = new System.Drawing.Size(207, 23);
-            this.txtDireccion.TabIndex = 7;
+            txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtDireccion.BackColor = System.Drawing.Color.SeaShell;
+            txtDireccion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtDireccion.Location = new System.Drawing.Point(117, 118);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.ReadOnly = true;
+            txtDireccion.Size = new System.Drawing.Size(207, 23);
+            txtDireccion.TabIndex = 7;
             // 
             // lblDireccion
             // 
-            this.lblDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDireccion.Location = new System.Drawing.Point(25, 121);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(73, 17);
-            this.lblDireccion.TabIndex = 32;
-            this.lblDireccion.Text = "Direccion:";
+            lblDireccion.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDireccion.AutoSize = true;
+            lblDireccion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblDireccion.Location = new System.Drawing.Point(25, 121);
+            lblDireccion.Name = "lblDireccion";
+            lblDireccion.Size = new System.Drawing.Size(73, 17);
+            lblDireccion.TabIndex = 32;
+            lblDireccion.Text = "Direccion:";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefono.BackColor = System.Drawing.Color.SeaShell;
-            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTelefono.Location = new System.Drawing.Point(117, 60);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.ReadOnly = true;
-            this.txtTelefono.Size = new System.Drawing.Size(207, 23);
-            this.txtTelefono.TabIndex = 5;
+            txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtTelefono.BackColor = System.Drawing.Color.SeaShell;
+            txtTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtTelefono.Location = new System.Drawing.Point(117, 60);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.ReadOnly = true;
+            txtTelefono.Size = new System.Drawing.Size(207, 23);
+            txtTelefono.TabIndex = 5;
             // 
             // lblTelefono
             // 
-            this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTelefono.Location = new System.Drawing.Point(32, 63);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(66, 17);
-            this.lblTelefono.TabIndex = 30;
-            this.lblTelefono.Text = "Telefono:";
+            lblTelefono.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTelefono.AutoSize = true;
+            lblTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblTelefono.Location = new System.Drawing.Point(32, 63);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new System.Drawing.Size(66, 17);
+            lblTelefono.TabIndex = 30;
+            lblTelefono.Text = "Telefono:";
             // 
             // txtDNI
             // 
-            this.txtDNI.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDNI.BackColor = System.Drawing.Color.SeaShell;
-            this.txtDNI.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDNI.Location = new System.Drawing.Point(117, 147);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.ReadOnly = true;
-            this.txtDNI.Size = new System.Drawing.Size(207, 23);
-            this.txtDNI.TabIndex = 8;
+            txtDNI.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtDNI.BackColor = System.Drawing.Color.SeaShell;
+            txtDNI.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtDNI.Location = new System.Drawing.Point(117, 147);
+            txtDNI.Name = "txtDNI";
+            txtDNI.ReadOnly = true;
+            txtDNI.Size = new System.Drawing.Size(207, 23);
+            txtDNI.TabIndex = 8;
             // 
             // lblDNI
             // 
-            this.lblDNI.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDNI.AutoSize = true;
-            this.lblDNI.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDNI.Location = new System.Drawing.Point(63, 150);
-            this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(35, 17);
-            this.lblDNI.TabIndex = 28;
-            this.lblDNI.Text = "DNI:";
+            lblDNI.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDNI.AutoSize = true;
+            lblDNI.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblDNI.Location = new System.Drawing.Point(63, 150);
+            lblDNI.Name = "lblDNI";
+            lblDNI.Size = new System.Drawing.Size(35, 17);
+            lblDNI.TabIndex = 28;
+            lblDNI.Text = "DNI:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.BackColor = System.Drawing.Color.SeaShell;
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.Location = new System.Drawing.Point(117, 31);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(207, 23);
-            this.txtNombre.TabIndex = 4;
+            txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtNombre.BackColor = System.Drawing.Color.SeaShell;
+            txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtNombre.Location = new System.Drawing.Point(117, 31);
+            txtNombre.Name = "txtNombre";
+            txtNombre.ReadOnly = true;
+            txtNombre.Size = new System.Drawing.Size(207, 23);
+            txtNombre.TabIndex = 4;
             // 
             // lblNombre
             // 
-            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(33, 34);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 17);
-            this.lblNombre.TabIndex = 26;
-            this.lblNombre.Text = "Nombre:";
+            lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblNombre.Location = new System.Drawing.Point(33, 34);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new System.Drawing.Size(65, 17);
+            lblNombre.TabIndex = 26;
+            lblNombre.Text = "Nombre:";
             // 
             // btnModificar
             // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificar.BackColor = System.Drawing.Color.SeaShell;
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnModificar.FlatAppearance.BorderSize = 3;
-            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnModificar.Image = global::DesktopBiblioteca.Properties.Resources.pencil;
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(548, 418);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(112, 39);
-            this.btnModificar.TabIndex = 2;
-            this.btnModificar.Text = "Modificar ";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            btnModificar.BackColor = System.Drawing.Color.SeaShell;
+            btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnModificar.FlatAppearance.BorderSize = 3;
+            btnModificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnModificar.Image = Properties.Resources.pencil;
+            btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnModificar.Location = new System.Drawing.Point(548, 418);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new System.Drawing.Size(112, 39);
+            btnModificar.TabIndex = 2;
+            btnModificar.Text = "Modificar ";
+            btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnModificar.UseVisualStyleBackColor = false;
+            btnModificar.Click += btnModificar_Click;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.BackColor = System.Drawing.Color.SeaShell;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Image = global::DesktopBiblioteca.Properties.Resources.eliminar;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(676, 418);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(112, 39);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar ";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            btnEliminar.BackColor = System.Drawing.Color.SeaShell;
+            btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnEliminar.Image = Properties.Resources.eliminar;
+            btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnEliminar.Location = new System.Drawing.Point(676, 418);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new System.Drawing.Size(112, 39);
+            btnEliminar.TabIndex = 3;
+            btnEliminar.Text = "Eliminar ";
+            btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // txtEmail
             // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.BackColor = System.Drawing.Color.SeaShell;
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEmail.Location = new System.Drawing.Point(117, 89);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(207, 23);
-            this.txtEmail.TabIndex = 6;
+            txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtEmail.BackColor = System.Drawing.Color.SeaShell;
+            txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtEmail.Location = new System.Drawing.Point(117, 89);
+            txtEmail.Name = "txtEmail";
+            txtEmail.ReadOnly = true;
+            txtEmail.Size = new System.Drawing.Size(207, 23);
+            txtEmail.TabIndex = 6;
             // 
             // lblEmail
             // 
-            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblEmail.Location = new System.Drawing.Point(51, 92);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(47, 17);
-            this.lblEmail.TabIndex = 34;
-            this.lblEmail.Text = "Email:";
+            lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblEmail.Location = new System.Drawing.Point(51, 92);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new System.Drawing.Size(47, 17);
+            lblEmail.TabIndex = 34;
+            lblEmail.Text = "Email:";
             // 
             // LbTituloClientes
             // 
-            this.LbTituloClientes.AutoSize = true;
-            this.LbTituloClientes.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LbTituloClientes.Location = new System.Drawing.Point(421, 12);
-            this.LbTituloClientes.Name = "LbTituloClientes";
-            this.LbTituloClientes.Size = new System.Drawing.Size(135, 42);
-            this.LbTituloClientes.TabIndex = 36;
-            this.LbTituloClientes.Text = "Lectores";
+            LbTituloClientes.AutoSize = true;
+            LbTituloClientes.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            LbTituloClientes.Location = new System.Drawing.Point(421, 12);
+            LbTituloClientes.Name = "LbTituloClientes";
+            LbTituloClientes.Size = new System.Drawing.Size(135, 42);
+            LbTituloClientes.TabIndex = 36;
+            LbTituloClientes.Text = "Lectores";
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txtDireccion);
-            this.panel1.Controls.Add(this.lblNombre);
-            this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Controls.Add(this.lblEmail);
-            this.panel1.Controls.Add(this.lblDNI);
-            this.panel1.Controls.Add(this.txtDNI);
-            this.panel1.Controls.Add(this.lblDireccion);
-            this.panel1.Controls.Add(this.lblTelefono);
-            this.panel1.Controls.Add(this.txtTelefono);
-            this.panel1.Location = new System.Drawing.Point(421, 96);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 198);
-            this.panel1.TabIndex = 37;
+            panel1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            panel1.BackColor = System.Drawing.Color.LightSlateGray;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(txtDireccion);
+            panel1.Controls.Add(lblNombre);
+            panel1.Controls.Add(txtEmail);
+            panel1.Controls.Add(txtNombre);
+            panel1.Controls.Add(lblEmail);
+            panel1.Controls.Add(lblDNI);
+            panel1.Controls.Add(txtDNI);
+            panel1.Controls.Add(lblDireccion);
+            panel1.Controls.Add(lblTelefono);
+            panel1.Controls.Add(txtTelefono);
+            panel1.Location = new System.Drawing.Point(421, 96);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(367, 198);
+            panel1.TabIndex = 37;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(439, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 17);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Informacion del Lector";
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(439, 87);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(154, 17);
+            label1.TabIndex = 38;
+            label1.Text = "Informacion del Lector";
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BackColor = System.Drawing.Color.SeaShell;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnSave.FlatAppearance.BorderSize = 3;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Image = global::DesktopBiblioteca.Properties.Resources.guardar_el_archivo;
-            this.btnSave.Location = new System.Drawing.Point(643, 300);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(62, 39);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Visible = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            btnSave.BackColor = System.Drawing.Color.SeaShell;
+            btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnSave.FlatAppearance.BorderSize = 3;
+            btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnSave.Image = Properties.Resources.guardar_el_archivo;
+            btnSave.Location = new System.Drawing.Point(643, 300);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new System.Drawing.Size(62, 39);
+            btnSave.TabIndex = 9;
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Visible = false;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BackColor = System.Drawing.Color.SeaShell;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel.FlatAppearance.BorderSize = 3;
-            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancel.Image = global::DesktopBiblioteca.Properties.Resources.close;
-            this.btnCancel.Location = new System.Drawing.Point(724, 300);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(62, 39);
-            this.btnCancel.TabIndex = 10;
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Visible = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            btnCancel.BackColor = System.Drawing.Color.SeaShell;
+            btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnCancel.FlatAppearance.BorderSize = 3;
+            btnCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancel.Image = Properties.Resources.close;
+            btnCancel.Location = new System.Drawing.Point(724, 300);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new System.Drawing.Size(62, 39);
+            btnCancel.TabIndex = 10;
+            btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Visible = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuevo.BackColor = System.Drawing.Color.SeaShell;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnNuevo.FlatAppearance.BorderSize = 3;
-            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnNuevo.Image = global::DesktopBiblioteca.Properties.Resources.plus;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(421, 418);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(112, 39);
-            this.btnNuevo.TabIndex = 1;
-            this.btnNuevo.Text = "Nuevo ";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            btnNuevo.BackColor = System.Drawing.Color.SeaShell;
+            btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnNuevo.FlatAppearance.BorderSize = 3;
+            btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnNuevo.Image = Properties.Resources.plus;
+            btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnNuevo.Location = new System.Drawing.Point(421, 418);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new System.Drawing.Size(112, 39);
+            btnNuevo.TabIndex = 1;
+            btnNuevo.Text = "Nuevo ";
+            btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
-            // btnGet
+            // btnGetReaders
             // 
-            this.btnGet.BackColor = System.Drawing.Color.SeaShell;
-            this.btnGet.BackgroundImage = global::DesktopBiblioteca.Properties.Resources.reload_ui_2_svgrepo_com;
-            this.btnGet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnGet.FlatAppearance.BorderSize = 3;
-            this.btnGet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnGet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGet.Location = new System.Drawing.Point(374, 12);
-            this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(29, 23);
-            this.btnGet.TabIndex = 41;
-            this.btnGet.TabStop = false;
-            this.btnGet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGet.UseVisualStyleBackColor = false;
+            btnGetReaders.BackColor = System.Drawing.Color.SeaShell;
+            btnGetReaders.BackgroundImage = Properties.Resources.reload_ui_2_svgrepo_com;
+            btnGetReaders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnGetReaders.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnGetReaders.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnGetReaders.FlatAppearance.BorderSize = 3;
+            btnGetReaders.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnGetReaders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnGetReaders.Location = new System.Drawing.Point(374, 12);
+            btnGetReaders.Name = "btnGetReaders";
+            btnGetReaders.Size = new System.Drawing.Size(29, 23);
+            btnGetReaders.TabIndex = 41;
+            btnGetReaders.TabStop = false;
+            btnGetReaders.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnGetReaders.UseVisualStyleBackColor = false;
+            btnGetReaders.Click += btnGetReaders_Click;
             // 
             // ReadersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(800, 469);
-            this.Controls.Add(this.btnGet);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.LbTituloClientes);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.dataGridReaders);
-            this.Controls.Add(this.txtBuscar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ReadersForm";
-            this.Text = "ReadersForm";
-            this.Load += new System.EventHandler(this.ReadersForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridReaders)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.LightSlateGray;
+            ClientSize = new System.Drawing.Size(800, 469);
+            Controls.Add(btnGetReaders);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSave);
+            Controls.Add(label1);
+            Controls.Add(panel1);
+            Controls.Add(LbTituloClientes);
+            Controls.Add(btnModificar);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnNuevo);
+            Controls.Add(dataGridReaders);
+            Controls.Add(txtBuscar);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Name = "ReadersForm";
+            Text = "ReadersForm";
+            Load += ReadersForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridReaders).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -417,6 +391,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnGet;
+        private System.Windows.Forms.Button btnGetReaders;
     }
 }
