@@ -15,6 +15,8 @@ namespace DesktopBiblioteca.Entities
         public int CategoryID { get; set; }
         public int Quantity { get; set; }
 
-        public Category Category { get; set; }  
+        public Category Category { get; set; }
+
+        public bool lower { get; set; }
     }
 }

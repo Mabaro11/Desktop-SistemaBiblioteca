@@ -46,15 +46,29 @@ namespace DesktopBiblioteca.ApiHelper
 
                     using (HttpResponseMessage res = await client.SendAsync(request))
                     {
+
                         using (HttpContent content = res.Content)
                         {
+                            //string data = await content.ReadAsStringAsync();
+
+                            //if (data != null && (res.StatusCode == HttpStatusCode.NotFound || res.StatusCode == HttpStatusCode.MethodNotAllowed))
+                            //{
+                            //    oReply.Data = data; 
+
+                            //}
+                            //else if (data != null && res.StatusCode == HttpStatusCode.OK)
+                            //{
+                            //    oReply.Data = JsonConvert.DeserializeObject<T>(data);
+                            //}
+
+                            ////oReply.StatusCode = res.StatusCode.ToString();
+                            //oReply.StatusCode = res.StatusCode.ToString();
+
                             string data = await content.ReadAsStringAsync();
                             if (data != null)
                                 oReply.Data = JsonConvert.DeserializeObject<T>(data);
 
-                            //oReply.StatusCode = res.StatusCode.ToString();
                             oReply.StatusCode = res.StatusCode.ToString();
-
                         }
                     }
                 }

@@ -14,7 +14,7 @@ namespace DesktopBiblioteca.Forms
 {
     public partial class ReadersForm : Form
     {
-        private String URI = "http://localhost:5000/api" + "/reader";
+        private readonly string URI = Program.BaseUrl + "/reader";
 
         BindingSource readersList = new BindingSource();
 
@@ -59,11 +59,13 @@ namespace DesktopBiblioteca.Forms
                 dataGridReaders.Columns["phone"].Visible = false; // Telefono
                 dataGridReaders.Columns["address"].Visible = false; // Direccion
                 dataGridReaders.Columns["email"].Visible = false; // Email 
+                dataGridReaders.Columns["lower"].Visible = false; // Lower 
                 //Cambio el nombre a las que quedan
+                dataGridReaders.Columns["id"].HeaderText = "ID";
                 dataGridReaders.Columns["name"].HeaderText = "Nombre";
                 dataGridReaders.Columns["dni"].HeaderText = "DNI";
-            }
 
+            }
         }
 
         private void dataGridReaders_SelectionChanged(object sender, EventArgs e)

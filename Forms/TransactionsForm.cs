@@ -22,10 +22,6 @@ namespace DesktopBiblioteca.Forms
         private string URLBooks;
         private string URLReaders;
 
-        //BindingSource transactionsList = new BindingSource();
-        //BindingSource booksList = new BindingSource();
-        //BindingSource readersList = new BindingSource();
-
         BindingSource filteredList = new BindingSource();
 
         List<Transaction> listadoTransaction = new List<Transaction>();
@@ -37,8 +33,8 @@ namespace DesktopBiblioteca.Forms
         {
             InitializeComponent();
             this.URLTransactions = URI + "/transaction";
-            this.URLBooks = URI + "/book";
-            this.URLReaders = URI + "/reader";
+            this.URLBooks = URI + "/book/all";
+            this.URLReaders = URI + "/reader/all";
         }
 
         private async void GetData()
@@ -48,15 +44,15 @@ namespace DesktopBiblioteca.Forms
 
             Reply oReply = new Reply();
 
-            oReply = await Consumer.Execute<List<Transaction>>(URLTransactions, ApiHelper.methodHttp.GET, listadoTransaction);
+            oReply = await Consumer.Execute(URLTransactions, methodHttp.GET, listadoTransaction);
             this.listadoTransaction = (List<Transaction>)oReply.Data;
             CheckReply(oReply);
 
-            oReply = await Consumer.Execute<List<Reader>>(URLReaders, ApiHelper.methodHttp.GET, listadoReader);
+            oReply = await Consumer.Execute(URLReaders, methodHttp.GET, listadoReader);
             this.listadoReader = (List<Reader>)oReply.Data;
             CheckReply(oReply);
 
-            oReply = await Consumer.Execute<List<Book>>(URLBooks, ApiHelper.methodHttp.GET, listadoBook);
+            oReply = await Consumer.Execute(URLBooks, methodHttp.GET, listadoBook);
             this.listadoBook = (List<Book>)oReply.Data;
             CheckReply(oReply);
 
@@ -83,7 +79,7 @@ namespace DesktopBiblioteca.Forms
         }
 
         private void setBindingList()
-        {//Aca hago una vuletita para pasar de las listas a el bindingSource.
+        {
             var result = listadoTransaction.Select(t => new
             {
                 ID = t.ID,
@@ -292,7 +288,7 @@ namespace DesktopBiblioteca.Forms
 
                 oReply = await Consumer.Execute<Transaction>(URLTransactions + $"/{transactionId}", methodHttp.DELETE, transaction);
 
-                MessageBox.Show(oReply.Data.ToString());
+                MessageBox.Show(oReply.StatusCode.ToString());
                 filteredList.RemoveCurrent();
 
             }
@@ -321,10 +317,7 @@ namespace DesktopBiblioteca.Forms
                 report.Show();
 
             }
-            else
-            {
-                this.Close();
-            }
+
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

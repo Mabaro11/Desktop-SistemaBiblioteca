@@ -52,6 +52,7 @@ namespace DesktopBiblioteca.Forms
 
             //Poblamos el datagridview
             categoriesList.DataSource = oReply.Data;
+
         }
 
         private void CategoriesForm_Load(object sender, EventArgs e)

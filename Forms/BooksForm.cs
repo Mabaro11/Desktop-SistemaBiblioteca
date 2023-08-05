@@ -16,13 +16,13 @@ namespace DesktopBiblioteca.Forms
     public partial class BooksForm : Form
     {
 
-        private readonly String URI = "http://localhost:5000/api";
+        private readonly string URI = Program.BaseUrl;
 
-        private String URL;
-        private String URLCategories;
+        private string URL;
+        private string URLCategories;
 
         BindingSource booksList = new BindingSource();
-        BindingSource categoriesList = new BindingSource();
+        //BindingSource categoriesList = new BindingSource();
 
         BusyIndicator busyIndicator = new BusyIndicator();
 
@@ -35,7 +35,7 @@ namespace DesktopBiblioteca.Forms
 
         }
 
-        private async void btnGet_Click(object sender, EventArgs e)
+        private void btnGet_Click(object sender, EventArgs e)
         {
             GetBooks();
         }
@@ -62,18 +62,31 @@ namespace DesktopBiblioteca.Forms
             //Poblamos el datagridview
             booksList.DataSource = oReply.Data;
 
-            if (oReply.Data != null)
+            if (booksList.DataSource != null)
             {
                 //Oculto Filas que no deseo.
                 dataGridBooks.Columns["description"].Visible = false; // Telefono
                 dataGridBooks.Columns["editorial"].Visible = false; // Direccion
                 dataGridBooks.Columns["category"].Visible = false; // Email 
-                dataGridBooks.Columns["quantity"].Visible = false; // Categoria 
+                dataGridBooks.Columns["lower"].Visible = false; // Categoria 
                 dataGridBooks.Columns["categoryID"].Visible = false; // Categoria 
 
+                //Cambio nombres a columnas
+                dataGridBooks.Columns["id"].HeaderText = "ID";
+                dataGridBooks.Columns["title"].HeaderText = "Titulo";
+                dataGridBooks.Columns["author"].HeaderText = "Autor";
+
+                //foreach (DataGridViewRow fila in dataGridBooks.Rows)
+                //{
+                //    if ((bool)fila.Cells["lower"].Value)
+                //    {
+                //        fila.DefaultCellStyle.ForeColor = Color.Red;
+                //    }
+                //}
             }
 
         }
+
 
         private async void GetCategories()
         {
@@ -197,7 +210,7 @@ namespace DesktopBiblioteca.Forms
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            //creamos un objeto del tipo socio
+            //creamos un objeto del tipo libro
             Book book = new Book();
             Reply oReply = new Reply();
 
@@ -206,7 +219,6 @@ namespace DesktopBiblioteca.Forms
             if (txtAutor.TextLength > 0 &&
                 txtDescripcion.TextLength > 0 &&
                 txtTitulo.TextLength > 0 &&
-                //txtCategoria.TextLength > 0 &&
                 txtEditorial.TextLength > 0)
             {
                 book.Title = txtTitulo.Text;
@@ -217,21 +229,33 @@ namespace DesktopBiblioteca.Forms
 
                 if (this.idBookModificado == 0)
                 {
-                    //agregamos el book a la tabla readers
-                    oReply = await Consumer.Execute<Book>(URL, ApiHelper.methodHttp.POST, book);
+                    this.btnSave.BackgroundImage = null;
+                    busyIndicator.Show(this.btnSave);
 
-                    MessageBox.Show(oReply.StatusCode);
+                    //agregamos el book a la tabla readers
+                    oReply = await Consumer.Execute<Book>(URL, methodHttp.POST, book);
+
+                    busyIndicator.Hide();
+                    btnSave.BackgroundImage = Properties.Resources.guardar_el_archivo;
+
+                    MessageBox.Show(oReply.Data.ToString(), oReply.StatusCode.ToString());
                 }
                 else
                 {
+                    busyIndicator.Show(this.btnSave);
                     book.ID = this.idBookModificado;
-                    oReply = await Consumer.Execute<Book>(URL + $"/{book.ID}", ApiHelper.methodHttp.PUT, book);
+                    oReply = await Consumer.Execute<Book>(URL + $"/{book.ID}", methodHttp.PUT, book);
 
-                    MessageBox.Show(oReply.StatusCode);
+                    busyIndicator.Hide();
+                    MessageBox.Show(oReply.Data.ToString(),oReply.StatusCode.ToString());
 
                 }
+                busyIndicator.Hide();
+
                 CancelControls();
                 GetBooks();
+                
+
             }
             else
             {
@@ -245,11 +269,15 @@ namespace DesktopBiblioteca.Forms
         }
         private async void btnEliminar_Click(object sender, EventArgs e)
         {
+            busyIndicator.Show(this.btnEliminar);
+
             Book book = new Book();
             Reply oReply = new Reply();
             var bookId = Convert.ToInt32(dataGridBooks.CurrentRow.Cells[0].Value);
 
-            oReply = await Consumer.Execute<Book>(URL + $"/{bookId}", ApiHelper.methodHttp.DELETE, book);
+            oReply = await Consumer.Execute(URL + $"/{bookId}", methodHttp.DELETE, book);
+
+            busyIndicator.Hide();
 
             MessageBox.Show(oReply.StatusCode);
             GetBooks();

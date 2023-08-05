@@ -13,5 +13,6 @@ namespace DesktopBiblioteca.Entities
         public string email { get; set; }
         public string dni { get; set; }
 
+        public bool lower { get; set; }
     }
 }

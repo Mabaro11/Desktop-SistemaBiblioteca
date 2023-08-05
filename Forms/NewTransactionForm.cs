@@ -100,10 +100,11 @@ namespace DesktopBiblioteca.Forms
                 dataGridLibros.Columns["description"].Visible = false; // Telefono
                 dataGridLibros.Columns["editorial"].Visible = false; // Direccion
                 dataGridLibros.Columns["category"].Visible = false; // Email 
-                //dataGridLibros.Columns["availability"].Visible = false; // Categoria 
+                dataGridLibros.Columns["quantity"].Visible = false; // Cantidad 
                 dataGridLibros.Columns["categoryID"].Visible = false; // Categoria 
                 dataGridLibros.Columns["title"].HeaderText = "Titulo";
                 dataGridLibros.Columns["author"].HeaderText = "Autor";
+                dataGridLibros.Columns["lower"].Visible = false; // Cantidad 
 
                 //Oculto Filas que no deseo.
                 dataGridLectores.Columns["phone"].Visible = false; // Telefono
@@ -112,6 +113,24 @@ namespace DesktopBiblioteca.Forms
                 //Cambio el nombre a las que quedan
                 dataGridLectores.Columns["name"].HeaderText = "Nombre";
                 dataGridLectores.Columns["dni"].HeaderText = "DNI";
+                dataGridLectores.Columns["lower"].Visible = false; // Cantidad 
+
+
+
+                foreach (DataGridViewRow fila in dataGridLibros.Rows)
+                {
+                    if (fila.Cells["lower"].Value == "True")
+                    {
+                        fila.Visible = false;
+                    }
+                }
+                foreach (DataGridViewRow fila in dataGridLectores.Rows)
+                {
+                    if (fila.Cells["lower"].Value == "True")
+                    {
+                        fila.Visible = false;
+                    }
+                }
 
             }
         }
@@ -153,7 +172,7 @@ namespace DesktopBiblioteca.Forms
                         transaction.ReaderID = Convert.ToInt32(GetValorCelda(dataGridLectores, 0));
                         transaction.LoanDate = DateTime.Now;
 
-                        oReply = await Consumer.Execute<Transaction>(URI, ApiHelper.methodHttp.POST, transaction);
+                        oReply = await Consumer.Execute(URI, methodHttp.POST, transaction);
                         MessageBox.Show(oReply.StatusCode);
                         transaction = (Transaction)oReply.Data;
 
