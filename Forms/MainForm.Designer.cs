@@ -121,7 +121,7 @@
             Controls.Add(MenuVertical);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
-            Text = "MainForm";
+            Text = "Sistema de Biblioteca";
             Load += MainForm_Load;
             MenuVertical.ResumeLayout(false);
             ResumeLayout(false);

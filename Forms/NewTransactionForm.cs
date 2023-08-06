@@ -14,7 +14,7 @@ namespace DesktopBiblioteca.Forms
 
         private string URI = Program.BaseUrl + "/transaction";
 
-        BusyIndicator busyIndicatorReaders= new BusyIndicator();
+        BusyIndicator busyIndicatorReaders = new BusyIndicator();
         BusyIndicator busyIndicatorBooks = new BusyIndicator();
 
         BindingSource readersList = new BindingSource();
@@ -39,7 +39,7 @@ namespace DesktopBiblioteca.Forms
         private void dataGridLibros_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridLibros.CurrentRow == null)
-            { 
+            {
                 txtTituloSeleccionado.Text = "";
             }
             else
@@ -64,15 +64,15 @@ namespace DesktopBiblioteca.Forms
 
         private void txtTituloLibro_TextChanged(object sender, EventArgs e)
         {
-         
+
             this.booksList.Filter = string.Format("title LIKE '%{0}%'", txtTituloLibro.Text);
             dataGridLectores.AllowUserToAddRows = false;
-            
+
         }
 
         private void txtNombreLector_TextChanged(object sender, EventArgs e)
         {
-            
+
             readersList.Filter = string.Format("name LIKE '%{0}%'", txtNombreLector.Text);
             dataGridLectores.AllowUserToAddRows = false;
         }
@@ -100,7 +100,6 @@ namespace DesktopBiblioteca.Forms
                 dataGridLibros.Columns["description"].Visible = false; // Telefono
                 dataGridLibros.Columns["editorial"].Visible = false; // Direccion
                 dataGridLibros.Columns["category"].Visible = false; // Email 
-                dataGridLibros.Columns["quantity"].Visible = false; // Cantidad 
                 dataGridLibros.Columns["categoryID"].Visible = false; // Categoria 
                 dataGridLibros.Columns["title"].HeaderText = "Titulo";
                 dataGridLibros.Columns["author"].HeaderText = "Autor";
@@ -151,7 +150,7 @@ namespace DesktopBiblioteca.Forms
 
         private async void btnSaveNewTransact_ClickAsync(object sender, EventArgs e)
         {
-            
+
 
             DialogResult result = MessageBox.Show("Desea confirmar el prestamo?", "Confirmar", MessageBoxButtons.YesNo);
             switch (result)
@@ -178,7 +177,7 @@ namespace DesktopBiblioteca.Forms
 
 
                         if (this.Owner is ITransaction formInterface)
-                            
+
                             formInterface.setNewTransaction(transaction);
 
                         this.Close();
@@ -191,7 +190,7 @@ namespace DesktopBiblioteca.Forms
 
             }
 
-            
+
 
         }
     }

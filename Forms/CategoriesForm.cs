@@ -53,12 +53,18 @@ namespace DesktopBiblioteca.Forms
             //Poblamos el datagridview
             categoriesList.DataSource = oReply.Data;
 
+            this.dataGridCategorias.DataSource = categoriesList;
+            dataGridCategorias.Columns["lower"].Visible = false; // Categoria 
+
+            dataGridCategorias.Columns["id"].HeaderText = "ID";
+            dataGridCategorias.Columns["name"].HeaderText = "Nombre";
+
         }
 
         private void CategoriesForm_Load(object sender, EventArgs e)
         {
             GetCategories();
-            this.dataGridCategorias.DataSource = categoriesList;
+            
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)

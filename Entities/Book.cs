@@ -13,7 +13,6 @@ namespace DesktopBiblioteca.Entities
         public string Editorial { get; set; }
         public string Author { get; set; }
         public int CategoryID { get; set; }
-        public int Quantity { get; set; }
 
         public Category Category { get; set; }
 
