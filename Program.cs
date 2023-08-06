@@ -9,7 +9,7 @@ namespace DesktopBiblioteca
 {
     internal static class Program
     {
-        public static string BaseUrl = "http://localhost:5000/api";
+        public static string BaseUrl = "http://mabaro.duckdns.org:5000/api";
 
         /// <summary>
         ///  The main entry point for the application.
